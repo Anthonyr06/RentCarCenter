@@ -112,7 +112,7 @@ namespace RentCarCenter.Forms.Maintenance
         {
             if (!IsFormValid())
             {
-                string msj = "Todos los campos son obligatorios.";
+                string msj = "Todos los campos son obligatorios. ";
                 MessageBox.Show(msj, "Revise los datos!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
