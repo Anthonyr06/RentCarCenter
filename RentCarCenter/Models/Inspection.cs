@@ -13,7 +13,7 @@ namespace RentCarCenter.Models
         [Required]
         public bool IsGrated { get; set; }
         [Required]
-        public int FuelQuantity { get; set; }
+        public string FuelQuantity { get; set; }
         [Required]
         public bool HasHydraulicCat { get; set; }
         [Required]

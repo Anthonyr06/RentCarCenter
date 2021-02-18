@@ -29,7 +29,6 @@ namespace RentCarCenter.Forms.Maintenance
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
@@ -42,29 +41,13 @@ namespace RentCarCenter.Forms.Maintenance
             this.label4 = new System.Windows.Forms.Label();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 286);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1055, 291);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
             // btnSave
             // 
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSave.Location = new System.Drawing.Point(202, 241);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 29);
@@ -75,6 +58,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             // EditBtn
             // 
+            this.EditBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EditBtn.Location = new System.Drawing.Point(490, 241);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(94, 29);
@@ -85,6 +69,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             // DeleteBtn
             // 
+            this.DeleteBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DeleteBtn.Location = new System.Drawing.Point(838, 241);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(94, 29);
@@ -96,6 +81,7 @@ namespace RentCarCenter.Forms.Maintenance
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(29, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
@@ -104,7 +90,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(125, 110);
+            this.txtDescription.Location = new System.Drawing.Point(125, 127);
             this.txtDescription.MaxLength = 200;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -114,7 +100,8 @@ namespace RentCarCenter.Forms.Maintenance
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(373, 182);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(392, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 6;
@@ -124,10 +111,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Items.AddRange(new object[] {
-            "A",
-            "I"});
-            this.cbStatus.Location = new System.Drawing.Point(436, 179);
+            this.cbStatus.Location = new System.Drawing.Point(455, 172);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(160, 28);
             this.cbStatus.TabIndex = 7;
@@ -136,6 +120,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(383, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(314, 41);
@@ -146,7 +131,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.cbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBrand.FormattingEnabled = true;
-            this.cbBrand.Location = new System.Drawing.Point(436, 133);
+            this.cbBrand.Location = new System.Drawing.Point(455, 126);
             this.cbBrand.Name = "cbBrand";
             this.cbBrand.Size = new System.Drawing.Size(160, 28);
             this.cbBrand.TabIndex = 10;
@@ -154,7 +139,8 @@ namespace RentCarCenter.Forms.Maintenance
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(318, 136);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(337, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 9;
@@ -164,7 +150,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.cbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(125, 184);
+            this.cbType.Location = new System.Drawing.Point(800, 133);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(160, 28);
             this.cbType.TabIndex = 12;
@@ -172,18 +158,38 @@ namespace RentCarCenter.Forms.Maintenance
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 187);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(693, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Tipo vehiculo:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 288);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1055, 291);
+            this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
             // VehicleModelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1054, 573);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbBrand);
@@ -196,7 +202,6 @@ namespace RentCarCenter.Forms.Maintenance
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "VehicleModelForm";
             this.Text = "Modelos de vehiculos";
             this.Load += new System.EventHandler(this.VehicleModelCRUD_Load);
@@ -207,8 +212,6 @@ namespace RentCarCenter.Forms.Maintenance
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteBtn;
@@ -221,5 +224,6 @@ namespace RentCarCenter.Forms.Maintenance
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

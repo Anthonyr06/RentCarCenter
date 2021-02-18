@@ -17,6 +17,7 @@ namespace RentCarCenter.Models
         public int RentDays { get; set; }
         [Required, MaxLength(500)]
         public string Comment { get; set; }
+        public bool HasBeenReturned { get; set; }
         public StatusEnum Status { get; set; }
 
         public int CustomerId { get; set; }

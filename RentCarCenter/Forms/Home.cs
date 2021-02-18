@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using RentCarCenter.Forms.Bussiness;
 
 namespace RentCarCenter.Forms
 {
@@ -32,17 +33,17 @@ namespace RentCarCenter.Forms
 
         private void btnNewRent_Click(object sender, EventArgs e)
         {
-            
+            OpenChild(new RentDetailForm());
         }
 
         private void btnNewInspection_Click(object sender, EventArgs e)
         {
-
+            OpenChild(new InspectionForm());
         }
 
         private void btnNewReturn_Click(object sender, EventArgs e)
         {
-
+            OpenChild(new ReturnDetailForm());
         }
 
         private void btnReports_Click(object sender, EventArgs e)

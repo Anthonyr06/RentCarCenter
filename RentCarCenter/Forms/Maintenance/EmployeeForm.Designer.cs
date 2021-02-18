@@ -68,7 +68,8 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(272, 232);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSave.Location = new System.Drawing.Point(227, 232);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 29);
             this.btnSave.TabIndex = 1;
@@ -78,6 +79,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             // EditBtn
             // 
+            this.EditBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EditBtn.Location = new System.Drawing.Point(481, 232);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(94, 29);
@@ -88,6 +90,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             // DeleteBtn
             // 
+            this.DeleteBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DeleteBtn.Location = new System.Drawing.Point(763, 232);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(94, 29);
@@ -99,6 +102,7 @@ namespace RentCarCenter.Forms.Maintenance
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(352, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
@@ -118,6 +122,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(449, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 41);
@@ -135,6 +140,7 @@ namespace RentCarCenter.Forms.Maintenance
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(22, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 20);
@@ -144,6 +150,7 @@ namespace RentCarCenter.Forms.Maintenance
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(57, 124);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
@@ -161,6 +168,7 @@ namespace RentCarCenter.Forms.Maintenance
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(650, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
@@ -191,6 +199,7 @@ namespace RentCarCenter.Forms.Maintenance
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(352, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 20);
@@ -201,7 +210,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1054, 573);
             this.Controls.Add(this.cbSchedule);
             this.Controls.Add(this.label4);

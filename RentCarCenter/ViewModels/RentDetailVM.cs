@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace TRC.Bussiness.ViewModels
+namespace RentCarCenter.ViewModels
 {
    public class RentDetailVM
     {

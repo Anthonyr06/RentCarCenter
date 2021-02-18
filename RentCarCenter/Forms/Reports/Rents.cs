@@ -14,8 +14,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RentCarCenter.Utilities;
-using TRC.Bussiness.Repository;
-using TRC.Bussiness.ViewModels;
+using RentCarCenter.Services;
+using RentCarCenter.ViewModels;
 using System.Linq;
 
 namespace RentCarCenter

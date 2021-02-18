@@ -92,7 +92,8 @@ namespace RentCarCenter.Forms.Maintenance
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 156);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(199, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 4;
@@ -100,7 +101,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(112, 147);
+            this.txtDescription.Location = new System.Drawing.Point(295, 123);
             this.txtDescription.MaxLength = 200;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -110,7 +111,8 @@ namespace RentCarCenter.Forms.Maintenance
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(356, 159);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(539, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 6;
@@ -123,7 +125,7 @@ namespace RentCarCenter.Forms.Maintenance
             this.cbStatus.Items.AddRange(new object[] {
             "A",
             "I"});
-            this.cbStatus.Location = new System.Drawing.Point(452, 156);
+            this.cbStatus.Location = new System.Drawing.Point(635, 132);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(160, 28);
             this.cbStatus.TabIndex = 7;
@@ -132,6 +134,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(388, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(293, 41);
@@ -142,7 +145,7 @@ namespace RentCarCenter.Forms.Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1054, 573);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbStatus);

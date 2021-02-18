@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RentCarCenter.Utilities;
 using RentCarCenter.Data;
-using TRC.Bussiness.Repository;
+using RentCarCenter.Services;
 using RentCarCenter.Models.Base;
 
 namespace RentCarCenter.Forms.Maintenance
@@ -56,17 +56,18 @@ namespace RentCarCenter.Forms.Maintenance
                 d.NoLicensePlate,
                 FuelType = d.FuelType.Description,
                 VehicleModel = d.VehicleModel.Description,
+                d.IsAvailable,
                 d.Status
             }).ToList();
         }
 
         private async Task RefreshComboBoxes()
         {
-            cbFuel.DataSource = await _FuelType.GetAll();
+            cbFuel.DataSource = (await _FuelType.GetAll()).Where(f => f.Status == StatusEnum.Activado).ToList();
             cbFuel.ValueMember = nameof(FuelType.Id);
             cbFuel.DisplayMember = nameof(FuelType.Description);
 
-            cbModel.DataSource = await _VehicleModel.GetAll();
+            cbModel.DataSource = (await _VehicleModel.GetAll()).Where(vm => vm.Status == StatusEnum.Activado).ToList();
             cbModel.ValueMember = nameof(VehicleModel.Id);
             cbModel.DisplayMember = nameof(VehicleModel.Description);
 
@@ -98,7 +99,8 @@ namespace RentCarCenter.Forms.Maintenance
                 NoMotor = txtMotor.Text.Trim(),
                 Status = (StatusEnum)cbStatus.SelectedItem,
                 VehicleModelId = int.TryParse(cbModel.SelectedValue.ToString(), out int idVehicleModel) ? idVehicleModel : 0,
-                FuelTypeId = int.TryParse(cbFuel.SelectedValue.ToString(), out int idFuelType) ? idFuelType : 0
+                FuelTypeId = int.TryParse(cbFuel.SelectedValue.ToString(), out int idFuelType) ? idFuelType : 0,
+                IsAvailable = true
             };
             await _Vehicle.Add(Vehicle);
             await _Vehicle.SaveAsync();

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RentCarCenter.Data;
 
-namespace TRC.Bussiness.Repository
+namespace RentCarCenter.Services
 {
     public class GenericRepository<T> where T : class, IBaseEntity, new() 
     {
@@ -54,7 +54,7 @@ namespace TRC.Bussiness.Repository
         public virtual async Task Delete(int id)
         {
             var entity = await _set.FirstOrDefaultAsync(e => e.Id == id);
-            entity.Status = StatusEnum.Desactivado;
+            entity.Status = StatusEnum.Eliminado;
             Update(entity);
         }
 

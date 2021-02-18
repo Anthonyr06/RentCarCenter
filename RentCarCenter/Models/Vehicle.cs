@@ -18,6 +18,7 @@ namespace RentCarCenter.Models
         public string NoMotor { get; set; }
         [Required, MaxLength(20)]
         public string NoLicensePlate { get; set; }
+        public bool IsAvailable { get; set; }
         public StatusEnum Status { get; set; }
 
         public int FuelTypeId { get; set; }

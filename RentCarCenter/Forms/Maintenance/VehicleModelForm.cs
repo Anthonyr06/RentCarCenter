@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RentCarCenter.Utilities;
 using RentCarCenter.Data;
-using TRC.Bussiness.Repository;
+using RentCarCenter.Services;
 using RentCarCenter.Models.Base;
 
 namespace RentCarCenter.Forms.Maintenance
@@ -39,10 +39,7 @@ namespace RentCarCenter.Forms.Maintenance
            CleanForm();
         }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            _gridViewLastSelectedRowIndex = dataGridView1.CurrentRow.Index;
-        }
+
 
         private async Task RefreshGridView()
         {
@@ -59,11 +56,11 @@ namespace RentCarCenter.Forms.Maintenance
 
         private async Task RefreshComboBoxes()
         {
-            cbType.DataSource = await _VehicleType.GetAll();
+            cbType.DataSource = (await _VehicleType.GetAll()).Where(vt => vt.Status == StatusEnum.Activado).ToList();
             cbType.ValueMember = nameof(VehicleType.Id);
             cbType.DisplayMember = nameof(VehicleType.Description);
 
-            cbBrand.DataSource = await _VehicleBrand.GetAll();
+            cbBrand.DataSource = (await _VehicleBrand.GetAll()).Where(vb => vb.Status == StatusEnum.Activado).ToList();
             cbBrand.ValueMember = nameof(VehicleBrand.Id);
             cbBrand.DisplayMember = nameof(VehicleBrand.Description);
 
@@ -209,5 +206,9 @@ namespace RentCarCenter.Forms.Maintenance
             await EditionModeToggle();
         }
 
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            _gridViewLastSelectedRowIndex = dataGridView1.CurrentRow.Index;
+        }
     }
 }

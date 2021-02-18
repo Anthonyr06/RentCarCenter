@@ -13,6 +13,6 @@ namespace RentCarCenter.Models.Base
     public enum StatusEnum
     {
         Activado,
-        Desactivado
+        Eliminado
     }
 }

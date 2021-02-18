@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RentCarCenter.Utilities;
 using RentCarCenter.Data;
-using TRC.Bussiness.Repository;
+using RentCarCenter.Services;
 using RentCarCenter.Models.Base;
 using System.Text.RegularExpressions;
 
@@ -78,7 +78,8 @@ namespace RentCarCenter.Forms.Maintenance
                 Identification = mTxtIdentification.Text.Trim(),
                 Schedule = (EmployeeScheduleEnum)cbStatus.SelectedItem,
                 Commission = (int)numericUpDown1.Value,
-                Status = (StatusEnum)cbStatus.SelectedItem
+                Status = (StatusEnum)cbStatus.SelectedItem,
+                EntryDate = DateTime.Now
             };
             await _Employee.Add(Employee);
             await _Employee.SaveAsync();
