@@ -16,7 +16,6 @@ namespace RentCarCenter.Forms.Bussiness
         private bool _editionMode;
         private Inspection _entityToEdit;
         private int _gridViewLastSelectedRowIndex = 0;
-       // private int _rentDataGridLastSelectedRowIndex = 0;
 
         public InspectionForm()
         {
@@ -29,6 +28,7 @@ namespace RentCarCenter.Forms.Bussiness
         {
             await RefreshGridView();
             cbStatus.DataSource = Enum.GetValues(typeof(StatusEnum));
+            cbFuelQuantity.SelectedIndex = 0;
         }
 
         public async Task RefreshGridView()
@@ -63,8 +63,7 @@ namespace RentCarCenter.Forms.Bussiness
 
         private void CleanForm()
         {
-            if (cbFuelQuantity.Items.Count > 0)
-                cbFuelQuantity.SelectedIndex = 0;
+            cbFuelQuantity.SelectedIndex = 0;
             cbHasBrokenMirror.Checked = false;
             cbHasHydraulicCat.Checked = false;
             cbHasSpareTire.Checked = false;

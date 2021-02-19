@@ -26,7 +26,7 @@ namespace RentCarCenter.Forms
                 return;
             }
 
-            if (txtUser.Text.Trim() != "Admin" || txtPwd.Text.Trim() != "12345")
+            if (txtUser.Text.Trim() != "Anthony" || txtPwd.Text.Trim() != "20200671")
             {
                MessageBox.Show("Los datos son incorrectos. Intentelo nuevamente", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
