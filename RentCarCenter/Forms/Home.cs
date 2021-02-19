@@ -19,6 +19,7 @@ namespace RentCarCenter.Forms
 
         private void Home_Load(object sender, EventArgs e)
         {
+            CenterToScreen();
         }
 
         private void OpenChild(Form form)
@@ -90,5 +91,6 @@ namespace RentCarCenter.Forms
         {
             Application.Exit();
         }
+
     }
 }

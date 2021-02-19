@@ -118,13 +118,16 @@ namespace RentCarCenter.Forms.Bussiness
                 _entityToEdit.VehicleId = int.TryParse(cbVehicle.SelectedValue.ToString(), out int idVehicle) ? idVehicle : 0;
                 _entityToEdit.CustomerId = int.TryParse(cbCustomer.SelectedValue.ToString(), out int idCustomer) ? idCustomer : 0;
                 _rentDetail.Update(_entityToEdit);
-                if (_entityToEdit.Status == StatusEnum.Eliminado)
-                {
-                    var vehicle = await _vehicle.Get(_entityToEdit.VehicleId);
+
+                var vehicle = await _vehicle.Get(_entityToEdit.VehicleId);
+
+                if (_entityToEdit.Status == StatusEnum.Activado)
+                    vehicle.IsAvailable = false;
+                else
                     vehicle.IsAvailable = true;
-                    _vehicle.Update(vehicle);
-                    await _vehicle.SaveAsync();
-                }
+
+                _vehicle.Update(vehicle);
+                await _vehicle.SaveAsync();
             }
             await _rentDetail.SaveAsync();
         }
@@ -163,7 +166,7 @@ namespace RentCarCenter.Forms.Bussiness
             _editionMode = !_editionMode;
         }
 
-        private async void RentDetailService_Load(object sender, EventArgs e)
+        private async void RentDetailForm_Load(object sender, EventArgs e)
         {
             await RefreshGridView();
             await RefreshComboBoxes(); 
@@ -182,16 +185,17 @@ namespace RentCarCenter.Forms.Bussiness
 
                 await SaveEntity(true);
                 await EditionModeToggle();
+                await RefreshGridView();
             }
             else
             {
                 await SaveEntity(false);
+                await RefreshGridView();
                 _gridViewLastSelectedRowIndex = rentDataGrid.Rows.Count - 1;
             }
 
             rentDataGrid.FirstDisplayedScrollingRowIndex = _gridViewLastSelectedRowIndex;
 
-            await RefreshGridView();
             await RefreshComboBoxes();
             CleanForm();
         }

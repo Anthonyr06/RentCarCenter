@@ -127,9 +127,9 @@ namespace RentCarCenter.Forms.Bussiness
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(12, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 41);
+            this.label3.Size = new System.Drawing.Size(240, 41);
             this.label3.TabIndex = 52;
-            this.label3.Text = "Rentas:";
+            this.label3.Text = "Rentas cerradas:";
             // 
             // rentDataGrid
             // 
@@ -272,7 +272,7 @@ namespace RentCarCenter.Forms.Bussiness
             this.Controls.Add(this.label1);
             this.Name = "InspectionForm";
             this.Text = "Rentas e inspecciones";
-            this.Load += new System.EventHandler(this.InspectionService_Load);
+            this.Load += new System.EventHandler(this.InspectionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rentDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inspectionDataGrid)).EndInit();
             this.ResumeLayout(false);

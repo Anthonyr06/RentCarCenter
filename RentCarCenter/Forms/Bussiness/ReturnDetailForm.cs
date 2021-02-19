@@ -20,7 +20,6 @@ namespace RentCarCenter.Forms.Bussiness
         private bool _editionMode;
         private ReturnDetail _entityToEdit;
         private int _gridViewLastSelectedRowIndex = 0;
-        private int _rentDataGridLastSelectedRowIndex = 0;
 
         public ReturnDetailForm()
         {
@@ -52,7 +51,7 @@ namespace RentCarCenter.Forms.Bussiness
                 d.Comment,
                 Returned = d.HasBeenReturned,
                 d.Status
-            }).Where(r => r.Status == StatusEnum.Activado).ToList();
+            }).Where(r => r.Status == StatusEnum.Activado && !r.Returned).ToList();
         }
 
         private void CleanForm()
@@ -69,7 +68,11 @@ namespace RentCarCenter.Forms.Bussiness
 
         private async Task DeleteEntity(int Id)
         {
-            await _returnDetail.Delete(Id);
+            var returnDetail = await _returnDetail.Get(Id, nameof(ReturnDetail.RentDetail), nameof(ReturnDetail.RentDetail)+"."+ nameof(ReturnDetail.RentDetail.Vehicle));
+            returnDetail.Status = StatusEnum.Eliminado;
+            returnDetail.RentDetail.HasBeenReturned = false;
+            returnDetail.RentDetail.Vehicle.IsAvailable = false;
+            _returnDetail.Update(returnDetail);
             await _returnDetail.SaveAsync();
         }
 
@@ -126,19 +129,24 @@ namespace RentCarCenter.Forms.Bussiness
                 _entityToEdit.Comment = commentTxt.Text;
                 _returnDetail.Update(_entityToEdit);
 
-                if (_entityToEdit.Status == StatusEnum.Eliminado)
+                var rent = await _rentDetail.Get(_entityToEdit.RentDetailId);
+                if (_entityToEdit.Status == StatusEnum.Activado)
                 {
-                    var rent = await _rentDetail.Get(_entityToEdit.RentDetailId);
+                    rent.HasBeenReturned = true;
+                    rent.Vehicle.IsAvailable = true;
+                }
+                else
+                {
                     rent.HasBeenReturned = false;
                     rent.Vehicle.IsAvailable = false;
+                }
                     _rentDetail.Update(rent);
                     await _rentDetail.SaveAsync();
-                }
             }
             await _returnDetail.SaveAsync();
         }
 
-        private async void ReturnDetailService_Load(object sender, EventArgs e)
+        private async void ReturnDetailForm_Load(object sender, EventArgs e)
         {
             await RefreshGridView();
             cbStatus.DataSource = Enum.GetValues(typeof(StatusEnum));
@@ -157,13 +165,6 @@ namespace RentCarCenter.Forms.Bussiness
             if (dialogResult == DialogResult.Yes)
             {
                 await DeleteEntity(id);
-
-                var rent = await _rentDetail.Get(id);
-                rent.HasBeenReturned = false;
-                rent.Vehicle.IsAvailable = false;
-                _rentDetail.Update(rent);
-                await _rentDetail.SaveAsync();
-
                 await RefreshGridView();
             }
 
@@ -197,10 +198,10 @@ namespace RentCarCenter.Forms.Bussiness
             {
                 await SaveEntity(false);
                 await RefreshGridView();
-                _gridViewLastSelectedRowIndex = rentDataGrid.Rows.Count - 1;
+                _gridViewLastSelectedRowIndex = returnDataGrid.Rows.Count - 1;
             }
 
-            rentDataGrid.FirstDisplayedScrollingRowIndex = _gridViewLastSelectedRowIndex;
+            returnDataGrid.FirstDisplayedScrollingRowIndex = _gridViewLastSelectedRowIndex;
 
             CleanForm();
         }
@@ -212,7 +213,6 @@ namespace RentCarCenter.Forms.Bussiness
 
         private void rentDataGrid_SelectionChanged(object sender, EventArgs e)
         {
-            _rentDataGridLastSelectedRowIndex = rentDataGrid.CurrentRow.Index;
         }
     }
 }

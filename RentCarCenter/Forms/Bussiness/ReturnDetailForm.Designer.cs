@@ -188,7 +188,7 @@ namespace RentCarCenter.Forms.Bussiness
             this.rentDataGrid.TabIndex = 47;
             this.rentDataGrid.SelectionChanged += new System.EventHandler(this.rentDataGrid_SelectionChanged);
             // 
-            // ReturnDetailService
+            // ReturnDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,9 +207,9 @@ namespace RentCarCenter.Forms.Bussiness
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Name = "ReturnDetailService";
+            this.Name = "ReturnDetailForm";
             this.Text = "Nueva Devolucion";
-            this.Load += new System.EventHandler(this.ReturnDetailService_Load);
+            this.Load += new System.EventHandler(this.ReturnDetailForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.returnDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentDataGrid)).EndInit();
             this.ResumeLayout(false);

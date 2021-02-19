@@ -27,5 +27,7 @@ namespace RentCarCenter.Models
         public int EmployeeId { get; set; }
         public virtual Employee Employee { get; set; }
         public virtual ICollection<Inspection> Inspection { get; set; }
+        public virtual ReturnDetail ReturnDetail { get; set; }
+
     }
 }

@@ -79,7 +79,7 @@ namespace RentCarCenter.Forms
             this.btnNewInspection.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewInspection.BackgroundImage")));
             this.btnNewInspection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNewInspection.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNewInspection.Location = new System.Drawing.Point(291, 123);
+            this.btnNewInspection.Location = new System.Drawing.Point(566, 123);
             this.btnNewInspection.Name = "btnNewInspection";
             this.btnNewInspection.Size = new System.Drawing.Size(180, 119);
             this.btnNewInspection.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace RentCarCenter.Forms
             this.btnNewReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewReturn.BackgroundImage")));
             this.btnNewReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNewReturn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNewReturn.Location = new System.Drawing.Point(553, 123);
+            this.btnNewReturn.Location = new System.Drawing.Point(298, 123);
             this.btnNewReturn.Name = "btnNewReturn";
             this.btnNewReturn.Size = new System.Drawing.Size(180, 119);
             this.btnNewReturn.TabIndex = 6;
@@ -236,7 +236,7 @@ namespace RentCarCenter.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(292, 245);
+            this.label6.Location = new System.Drawing.Point(581, 245);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 28);
             this.label6.TabIndex = 16;
@@ -247,7 +247,7 @@ namespace RentCarCenter.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(560, 245);
+            this.label7.Location = new System.Drawing.Point(305, 245);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(172, 28);
             this.label7.TabIndex = 17;
@@ -420,6 +420,7 @@ namespace RentCarCenter.Forms
             this.Name = "Home";
             this.Text = "Rent Car Center";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

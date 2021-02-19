@@ -39,7 +39,11 @@ namespace RentCarCenter
         {
             Data = new List<RentDetailVM>();
 
-            var rents = await _rents.GetAll(nameof(Employee), nameof(Vehicle), nameof(Customer), nameof(Vehicle) + "." + nameof(Vehicle.VehicleModel));
+            var rents = await _rents.GetAll(nameof(Employee), 
+                nameof(Vehicle), 
+                nameof(Customer), 
+                nameof(Vehicle) + "." + nameof(Vehicle.VehicleModel),
+                nameof(ReturnDetail));
 
             if (since != null && to != null)
                 rents = rents.Where(r => r.RentDate >= since && r.RentDate <= to).ToList();

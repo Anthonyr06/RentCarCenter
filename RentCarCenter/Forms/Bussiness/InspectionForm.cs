@@ -25,7 +25,7 @@ namespace RentCarCenter.Forms.Bussiness
             _inspection = new GenericRepository<Inspection>();
         }
 
-        private async void InspectionService_Load(object sender, EventArgs e)
+        private async void InspectionForm_Load(object sender, EventArgs e)
         {
             await RefreshGridView();
             cbStatus.DataSource = Enum.GetValues(typeof(StatusEnum));

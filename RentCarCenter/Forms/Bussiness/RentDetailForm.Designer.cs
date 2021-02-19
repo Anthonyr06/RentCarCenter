@@ -260,7 +260,7 @@ namespace RentCarCenter.Forms.Bussiness
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // RentDetailService
+            // RentDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,9 +287,9 @@ namespace RentCarCenter.Forms.Bussiness
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "RentDetailService";
+            this.Name = "RentDetailForm";
             this.Text = "Nueva renta";
-            this.Load += new System.EventHandler(this.RentDetailService_Load);
+            this.Load += new System.EventHandler(this.RentDetailForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nPriceByDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nRentDays)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentDataGrid)).EndInit();

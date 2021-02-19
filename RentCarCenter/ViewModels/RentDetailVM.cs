@@ -11,7 +11,8 @@ namespace RentCarCenter.ViewModels
     {
         public RentDetailVM(RentDetail rent)
         {
-            Fecha = rent.RentDate;
+            Rentado = rent.RentDate;
+            Devuelto = rent.ReturnDetail != null ? rent.ReturnDetail.Date.ToShortDateString() : "No";
             Cliente = rent.Customer.Name;
             CedulaCliente = rent.Customer.Identification;
             Empleado = rent.Employee.Name;
@@ -24,7 +25,8 @@ namespace RentCarCenter.ViewModels
             DiasRenta = rent.RentDays;
             Comentario = rent.Comment;
         }
-        public DateTime Fecha { get; set; }
+        public DateTime Rentado { get; set; }
+        public string Devuelto { get; set; }
         public string Cliente { get; set; }
         [DisplayName("Cedula cliente")]
         public string CedulaCliente { get; set; }
