@@ -52,13 +52,13 @@ namespace RentCarCenter
             this.GridRents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.GridRents.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GridRents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridRents.Location = new System.Drawing.Point(0, 164);
+            this.GridRents.Location = new System.Drawing.Point(293, 131);
             this.GridRents.Name = "GridRents";
             this.GridRents.ReadOnly = true;
             this.GridRents.RowHeadersVisible = false;
             this.GridRents.RowHeadersWidth = 51;
             this.GridRents.RowTemplate.Height = 29;
-            this.GridRents.Size = new System.Drawing.Size(1055, 409);
+            this.GridRents.Size = new System.Drawing.Size(759, 444);
             this.GridRents.TabIndex = 1;
             // 
             // PrintBtn
@@ -74,7 +74,7 @@ namespace RentCarCenter
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(12, 131);
+            this.SearchTextBox.Location = new System.Drawing.Point(12, 141);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.PlaceholderText = "Buscar cliente por cedula o nombre";
             this.SearchTextBox.Size = new System.Drawing.Size(251, 27);
@@ -94,21 +94,21 @@ namespace RentCarCenter
             // 
             // tpSince
             // 
-            this.tpSince.Location = new System.Drawing.Point(462, 131);
+            this.tpSince.Location = new System.Drawing.Point(89, 193);
             this.tpSince.Name = "tpSince";
-            this.tpSince.Size = new System.Drawing.Size(190, 27);
+            this.tpSince.Size = new System.Drawing.Size(174, 27);
             this.tpSince.TabIndex = 10;
             // 
             // tpTo
             // 
-            this.tpTo.Location = new System.Drawing.Point(731, 131);
+            this.tpTo.Location = new System.Drawing.Point(89, 251);
             this.tpTo.Name = "tpTo";
-            this.tpTo.Size = new System.Drawing.Size(190, 27);
+            this.tpTo.Size = new System.Drawing.Size(174, 27);
             this.tpTo.TabIndex = 11;
             // 
             // btnDateFilter
             // 
-            this.btnDateFilter.Location = new System.Drawing.Point(939, 132);
+            this.btnDateFilter.Location = new System.Drawing.Point(102, 330);
             this.btnDateFilter.Name = "btnDateFilter";
             this.btnDateFilter.Size = new System.Drawing.Size(94, 29);
             this.btnDateFilter.TabIndex = 12;
@@ -121,7 +121,7 @@ namespace RentCarCenter
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(385, 131);
+            this.label1.Location = new System.Drawing.Point(12, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 25);
             this.label1.TabIndex = 13;
@@ -132,7 +132,7 @@ namespace RentCarCenter
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(664, 131);
+            this.label2.Location = new System.Drawing.Point(12, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 25);
             this.label2.TabIndex = 14;
