@@ -13,7 +13,7 @@ Datos del login:
 
 ## Lenguaje y/o herramientas utilizadas: 
 * C#
-* .Net Framework MVC
+* .Net Framework
 * SQL Server
 * WinForms
 * Entity Framework
